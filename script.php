@@ -27,19 +27,37 @@ echo $_POST['badword'];
     <div class="row justify-content-center">
         <h1 class="text-center">
             <?php
+          
+              echo $_POST['paragraphe'];
               
-              echo $_POST['paragraphe']
 
             ?>
-        </h1>
-
-        <h1 class="text-center">
+            _____
             <?php
               
-              echo $_POST['badword']
               
+              echo strlen($_POST['paragraphe']);
+
             ?>
         </h1>
+
+        <h1 class="text-center mt-5">
+            <?php
+          
+              echo str_replace($_POST['badword'], "***", $_POST['paragraphe']) ;
+              
+
+            ?>
+            _____
+            <?php
+              
+              
+              echo strlen($_POST['paragraphe']);
+
+            ?>
+        </h1>
+
+       
     </div>
 </div>
 
